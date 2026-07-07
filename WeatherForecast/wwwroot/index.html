@@ -12,6 +12,9 @@
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="WeatherForecast.styles.css" rel="stylesheet" />
     <script type="importmap"></script>
+
+    <link href="manifest.json" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="images/sun-512.png" />
 </head>
 
 <body>
@@ -29,6 +32,9 @@
         <span class="dismiss">🗙</span>
     </div>
     <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
+    <script>
+        navigator.serviceWorker.register('/serviceworker.js');
+    </script>
 </body>
 
 </html>
