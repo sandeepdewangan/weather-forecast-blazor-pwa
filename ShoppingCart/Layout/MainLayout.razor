@@ -1,0 +1,38 @@
+﻿@using ShoppingCart.Services
+@inject ICartServices cartServices
+@implements IDisposable
+
+@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+
+        <div class="alert alert-primary">
+            <h2>Cart Total: $@cartServices.Total</h2>
+        </div>
+
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        cartServices.OnChange += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        cartServices.OnChange -= StateHasChanged;
+    }
+}
