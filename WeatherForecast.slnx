@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="ExcelReader/ExcelReader.csproj" Id="a4f1c8db-0415-4779-960f-ab893e1656d4" />
+  <Project Path="ExpenseTracker/ExpenseTracker.csproj" Id="21c66cd7-55a0-46db-8f24-8459d689c8fc" />
   <Project Path="KanbanBoard/KanbanBoard.csproj" Id="23c02115-da49-4209-8d82-80e40886a12e" />
   <Project Path="ShoppingCart/ShoppingCart.csproj" Id="25432d3f-3d2d-4f3b-ad64-21f984a4996d" />
   <Project Path="WeatherForecast/WeatherForecast.csproj" />
